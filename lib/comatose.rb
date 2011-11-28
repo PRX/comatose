@@ -12,6 +12,7 @@ module Comatose
 end
 
 require 'acts_as_versioned'
+require 'acts_as_tree_rails3'
 require 'redcloth' unless defined?(RedCloth)
 require 'liquid' unless defined?(Liquid)
 

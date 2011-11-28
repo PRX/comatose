@@ -109,5 +109,6 @@ Gem::Specification.new do |s|
   
   s.rdoc_options = ["--main", "README.markdown"]
   s.extra_rdoc_files = %w(README.markdown CHANGELOG SPECS LICENSE)
-  #s.add_dependency("mime-types", ["> 0.0.0"])
+  s.add_dependency("acts_as_tree_rails3")
+  s.add_dependency("acts_as_versioned")
 end
