@@ -4,7 +4,6 @@ class ComatoseController < ActionController::Base
   
   before_filter :handle_authorization, :set_content_type
   after_filter :cache_cms_page
-  helper :application
     
   # Render a specific page
   def show
