@@ -1,8 +1,5 @@
 # The controller for serving cms content...
 class ComatoseController < ActionController::Base 
-	include ExceptionLogger::ExceptionLoggable # loades the module
-  rescue_from Exception, :with => :log_exception_handler # tells rails to forward the 'Exception' (you can change the type) to the handler of the module
-
   unloadable
   
   before_filter :handle_authorization, :set_content_type
