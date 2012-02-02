@@ -76,7 +76,7 @@ protected
     if page_name.nil? or page_name.empty?
       page_name = params[:index]
       params[:cache_path] = "#{request.request_uri}/index"
-    elsif !params[:index].empty?
+    elsif params[:index].present?
       page_name = "#{params[:index]}/#{page_name}"
     end
     return page_name, page_ext
