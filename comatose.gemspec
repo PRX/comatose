@@ -102,4 +102,5 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = %w(README.markdown CHANGELOG SPECS LICENSE)
   s.add_dependency("acts_as_tree_rails3")
   s.add_dependency("acts_as_versioned")
+  s.add_dependency("dynamic_form")
 end
