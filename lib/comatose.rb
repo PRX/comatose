@@ -33,10 +33,6 @@ require 'support/route_mapper'
 #ActionController::Dispatcher.to_prepare is deprecated. " <<
 #          "Please use config.to_prepare instead
 ActionDispatch::Callbacks.to_prepare :comatose do
-  require 'comatose_admin_controller'
-  require 'comatose_admin_helper'
-  require 'comatose_controller'
-  require 'comatose_helper'
-  require 'comatose_page'
-    Comatose.config.after_setup.call
+  Comatose.config.after_setup.call
+  ActiveSupport::Dependencies.autoload_paths << File.dirname(__FILE__)
 end
