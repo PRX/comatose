@@ -39,7 +39,6 @@ ActionDispatch::Routing::Mapper.class_eval do
       :named_route => 'comatose_admin'
     }.merge(options)
     opts[:as] = opts.delete(:named_route)
-    opts[:via] = :get
     match("#{path}(/:action(/:id))", opts )
 
 
