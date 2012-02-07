@@ -38,9 +38,9 @@ return select_box
 
 	def form_url(page)
 		if page.id
-			action="/comatose_admin/edit/#{page.id}"
+			action=comatose_admin_path(:action => :edit, :id => page.id)
 		else
-			action="/comatose_admin/new"
+			action=comatose_admin_path(:action => :new)
 		end
 	end
   
