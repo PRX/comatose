@@ -29,10 +29,7 @@ require 'comatose/version'
 require 'support/inline_rendering'
 require 'support/route_mapper'
 
-#require 'dispatcher' unless defined?(::Dispatcher)
-#ActionController::Dispatcher.to_prepare is deprecated. " <<
-#          "Please use config.to_prepare instead
-ActionDispatch::Callbacks.to_prepare :comatose do
-  Comatose.config.after_setup.call
-  ActiveSupport::Dependencies.autoload_paths << File.dirname(__FILE__)
+ActionDispatch::Callbacks.to_prepare  do
+    Comatose.config.after_setup.call
+    ActiveSupport::Dependencies.autoload_paths << File.dirname(__FILE__)
 end
