@@ -1,7 +1,7 @@
-author: Matt McCray
+author: 'Matt McCray, Andrew Kuklewicz'
 summary: A micro CMS for embedding in Rails applications.
 homepage: http://comatose.rubyforge.org
-plugin: git://github.com/darthapo/comatose.git
+plugin: git://github.com/PRX/comatose.git
 license: MIT
 version: 2.0.5
-rails_version: 2+
+rails_version: 3+
